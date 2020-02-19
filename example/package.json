@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "ts-node": "^8.6.2",
-    "ts-worker": "0.0.5-B4",
+    "ts-worker": "1.0.0",
     "typescript": "^3.7.5"
   }
 }

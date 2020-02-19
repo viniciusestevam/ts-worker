@@ -6,6 +6,5 @@
     "declaration": true,
     "allowJs": true
   },
-  "include": ["src/*"],
   "exclude": ["node_modules"]
 }
