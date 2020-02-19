@@ -15,13 +15,6 @@ Typescript still doesn't offer worker_threads support. To use them, you need to 
 ```
 
 - Import:
-
-```javascript
-const TSWorker = require('ts-worker');
-```
-
-- ES6:
-
 ```javascript
 import TSWorker from 'ts-worker';
 ```
