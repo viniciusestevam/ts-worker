@@ -1,6 +1,6 @@
 {
   "name": "ts-worker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easily use worker_threads with Typescript",
   "devDependencies": {
     "@types/node": "^13.7.1",
