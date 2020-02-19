@@ -1,14 +1,15 @@
 {
-  "name": "worker_threads",
+  "name": "ts-worker",
   "version": "0.0.1",
-  "description": "Awesome project developed with TypeORM.",
+  "description": "Easily use worker_threads with Typescript",
   "devDependencies": {
     "@types/node": "^13.7.1",
+    "@types/callsite": "^1.0.30",
     "ts-node": "3.3.0",
-    "typescript": "3.3.3333"
+    "typescript": "3.3.3333",
+    "callsite": "^1.0.0"
   },
-  "dependencies": {},
   "scripts": {
     "start": "ts-node src/index.ts"
-  }
+  },
 }

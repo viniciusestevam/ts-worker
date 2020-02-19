@@ -1,12 +1,22 @@
-import { Worker } from 'worker_threads';
-import TSWorker from './TSWorker';
+import { Worker, WorkerOptions } from 'worker_threads';
+import * as callsite from 'callsite';
+const stack = callsite();
 
-const worker: Worker = TSWorker('worker.ts', {
-  workerData: {
-    value: 15
-  }
-});
+export default function TSWorker(
+  workerFile: string,
+  options?: WorkerOptions
+): Worker {
+  const workerFilePath: string = getWorkerFilePath(workerFile);
+  options.workerData = { ...options.workerData, workerFilePath };
+  return new Worker(__dirname + '/register.js', {
+    ...options
+  });
+}
 
-worker.on('message', res => {
-  console.log(res);
-});
+function getWorkerFilePath(workerFilename: string): string {
+  const callerFilePath = stack.pop().getFileName();
+  const res = callerFilePath.slice(0, callerFilePath.lastIndexOf('/'));
+  return workerFilename.startsWith('/')
+    ? res.concat(workerFilename)
+    : res.concat('/' + workerFilename);
+}
