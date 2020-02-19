@@ -14,7 +14,7 @@ export default function TSWorker(
 }
 
 function getWorkerFilePath(workerFilename: string): string {
-  const callerFilePath = stack.pop().getFileName();
+  const callerFilePath = stack[stack.length - 2].getFileName();
   const res = callerFilePath.slice(0, callerFilePath.lastIndexOf('/'));
   return workerFilename.startsWith('/')
     ? res.concat(workerFilename)
