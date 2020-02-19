@@ -30,6 +30,7 @@ import TSWorker from 'ts-worker';
 
 ```javascript
 import { Worker } from 'worker_threads'; // Just for typechecking
+import TSWorker from 'ts-worker';
 
 const worker: Worker = TSWorker('worker.ts', {
   workerData: {

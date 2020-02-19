@@ -1,6 +1,6 @@
 {
   "name": "ts-worker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Easily use worker_threads with Typescript",
   "devDependencies": {
     "@types/node": "^13.7.1",
@@ -14,5 +14,8 @@
     "prepublish": "tsc"
   },
   "main": "dist/index.js",
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "repository": {
+    "url": "https://github.com/estevam31/ts-worker"
+  }
 }
