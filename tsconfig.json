@@ -4,7 +4,8 @@
     "module": "commonjs",
     "outDir": "./dist",
     "declaration": true,
-    "allowJs": true
+    "allowJs": true,
+    "esModuleInterop": true
   },
   "include": ["src/*"],
   "exclude": ["node_modules"]

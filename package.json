@@ -2,12 +2,14 @@
   "name": "ts-worker",
   "version": "1.0.2",
   "description": "Easily use worker_threads with Typescript",
+  "dependencies": {
+    "callsite": "^1.0.0",
+    "ts-node": "3.3.0"
+  },
   "devDependencies": {
-    "@types/node": "^13.7.1",
     "@types/callsite": "^1.0.30",
-    "ts-node": "3.3.0",
-    "typescript": "3.7.5",
-    "callsite": "^1.0.0"
+    "@types/node": "^13.13.45",
+    "typescript": "3.7.5"
   },
   "scripts": {
     "start": "ts-node src/index.ts",
